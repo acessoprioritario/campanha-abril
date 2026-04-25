@@ -425,10 +425,21 @@ h1 {
 .cta-close {
     flex-shrink: 0;
     width: 28px;
-    text-align: center;
-    color: rgba(255, 255, 255, 0.95);
-    font-size: 28px;
-    font-weight: 400;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: transparent;
+    font-size: 0;
+    line-height: 0;
+}
+
+.cta-close::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-top: 3px solid rgba(255, 255, 255, 0.95);
+    border-right: 3px solid rgba(255, 255, 255, 0.95);
+    transform: rotate(45deg);
 }
 
 .white-button {
